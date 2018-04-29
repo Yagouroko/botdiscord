@@ -13,13 +13,13 @@ bot.login("NDM5ODc5NTk0NTc3NzU2MTcw.DcaQ7g.9yK4pgKXI5Ycuu9OCMSakEJc7z8");
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes: \n - -createur = Createur du bot*");
+        message.channel.sendMessage("Liste des commandes: \n - -createur = Createur du bot \n - -discord = Le discord du createur du bot*");
         console.log("Help effectué !");
     }
 
-    if (message.content === prefix + "insta"){
-        message.channel.sendMessage("Instagram de Carla: carla.asmr");
-        console.log("Insta effectué");
+    if (message.content === prefix + "discord"){
+        message.channel.sendMessage("Le Discord : https://discord.gg/xTR66sm ");
+        console.log("Discord effectué");
     }
 
     if (message.content === prefix + "createur"){

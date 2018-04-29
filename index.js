@@ -47,7 +47,7 @@ bot.on('message', message => {
         console.log("makaos effectué");
     }
     
-    bot.on('message', message => {
+bot.on('message', message => {
 
   if (message.content.startsWith('!play')) {
     // On récupère le premier channel audio du serveur
@@ -77,6 +77,5 @@ bot.on('message', message => {
       })
   }
 
-})
     
 });

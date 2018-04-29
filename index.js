@@ -47,4 +47,12 @@ bot.on('message', message => {
         console.log("makaos effectué");
     }
     
+     if (commande ===  " ping " ) {
+    // Calcule le ping entre l'envoi d'un message et son édition, ce qui donne une belle latence.
+    // Le second ping est une latence moyenne entre le bot et le serveur websocket (sens unique, pas aller-retour)
+    const  m  =  wait  message . canal . envoyer ( " Ping? " );
+    m . modifier ( ` ! Pong est Latence $ { m . createdTimestamp  - un  message . createdTimestamp } . ms Latence API est $ { Math . tour ( client . ping ) } ms ` );
+  }
+  
+    
 });

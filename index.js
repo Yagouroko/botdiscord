@@ -46,7 +46,28 @@ bot.on('message', message => {
         message.channel.sendMessage("Salut mua c'est Makoas ! :p");
         console.log("makaos effectué");
     }
-
+    
+    case "8ball":
+    let args = message.content.split(" ").slice(1);
+    let tte = args.join(" ")
+    if (!tte){
+       return message.reply("Merci de poser une question :8ball:")
+        
+        var replys = [
+            "Oui",
+            "Non",
+            "Je sais pas",
+            "Réessayer",
+            ];
+        
+        let reponse = (replys[Math.floor(Math.random() * replys.length)])
+        var bembed = new Discord.RichEmbed()
+        .setDescription(":8ball: 8ball")
+        .addField("Question", tte)
+        .addField("Réponse", reponse)
+        message.channel.sendEmbed(bembed)
+        
+}})
 
 
 

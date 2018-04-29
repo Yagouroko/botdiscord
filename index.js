@@ -48,7 +48,7 @@ bot.on('message', message => {
     }
     
         if (message.content === "-8ball") {
-    	var sayings = ["It is certain",
+    	var sayings =                                                          ["Certain",
 										"Oui",
 										"Non",
 										"Oui c'est sur Yagouroko-Kun le dit !",

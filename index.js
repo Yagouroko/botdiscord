@@ -47,5 +47,36 @@ bot.on('message', message => {
         console.log("makaos effectué");
     }
     
+    {
+    "name": "8ball",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [{
+        "channel": "0",
+        "varName": "",
+        "message": "${member} shook an 8-Ball!",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+    }, {
+        "time": "2",
+        "measurement": "1",
+        "name": "Wait"
+    }, {
+        "storage": "1",
+        "varName": "rnd_num",
+        "min": "1",
+        "max": "20",
+        "name": "Generate Random Number"
+    }, {
+        "behavior": "0",
+        "interpretation": "1",
+        "code": "switch (tempVars(\"rnd_num\")) {\n  case 1: msg.channel.send(\"The Magic 8-Ball says - **It is decidedly so**, \" + member + \".\"); break;\n  case 2: msg.channel.send(\"The Magic 8-Ball says - **Without a doubt**, \" + member + \".\"); break;\n  case 3: msg.channel.send(\"The Magic 8-Ball says - **Yes definitely**, \" + member + \".\"); break;\n  case 4: msg.channel.send(\"The Magic 8-Ball says - **You may rely on it**, \" + member + \".\"); break;\n  case 5: msg.channel.send(\"The Magic 8-Ball says - **As I see it, yes**, \" + member + \".\"); break;\n  case 6: msg.channel.send(\"The Magic 8-Ball says - **Most likely**, \" + member + \".\"); break;\n  case 7: msg.channel.send(\"The Magic 8-Ball says - **Outlook good**, \" + member + \".\"); break;\n  case 8: msg.channel.send(\"The Magic 8-Ball says - **Yes**, \" + member + \".\"); break;\n  case 9: msg.channel.send(\"The Magic 8-Ball says - **Signs point to yes**, \" + member + \".\"); break;\n  case 10: msg.channel.send(\"The Magic 8-Ball says - **Reply hazy try again**, \" + member + \".\"); break;\n  case 11: msg.channel.send(\"The Magic 8-Ball says - **Ask again later**, \" + member + \".\"); break;\n  case 12: msg.channel.send(\"The Magic 8-Ball says - **Better not tell you now**, \" + member + \".\"); break;\n  case 13: msg.channel.send(\"The Magic 8-Ball says - **Cannot predict now**, \" + member + \".\"); break;\n  case 14: msg.channel.send(\"The Magic 8-Ball says - **Concentrate and ask again**, \" + member + \".\"); break;\n  case 15: msg.channel.send(\"The Magic 8-Ball says - **Don't count on it**, \" + member + \".\"); break;\n  case 16: msg.channel.send(\"The Magic 8-Ball says - **My reply is no**, \" + member + \".\"); break;\n  case 17: msg.channel.send(\"The Magic 8-Ball says - **My sources say no**, \" + member + \".\"); break;\n  case 18: msg.channel.send(\"The Magic 8-Ball says - **Outlook not so good**, \" + member + \".\"); break;\n  case 19: msg.channel.send(\"The Magic 8-Ball says - **Very doubtful**, \" + member + \".\"); break;\n  default: msg.channel.send(\"The Magic 8-Ball says - **It is certain**, \" + member + \".\"); break;\n}",
+        "storage": "0",
+        "varName": "",
+        "name": "Run Script"
+    }]
+}
+    
 });
 

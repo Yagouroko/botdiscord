@@ -27,8 +27,6 @@ bot.on('message', message => {
         console.log("Createur envoyer !");
     }
     
-    const Discord = require('discord.js');
-
 function avatar(message, bot, prefix) {
      if (message.content.startsWith(prefix + "avatar")) {
     if (message.channel.type === "dm") return;

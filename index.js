@@ -27,4 +27,22 @@ bot.on('message', message => {
         console.log("Createur effectué");
     }
     
+    const Discord = require('discord.js');
+
+function avatar(message, bot, prefix) {
+     if (message.content.startsWith(prefix + "avatar")) {
+    if (message.channel.type === "dm") return;
+    
+    let user = message.mentions.users.first() ? message.mentions.users.first() : message.author;
+    
+    var embed = new Discord.RichEmbed()
+        .setColor(0xffffff) 
+        .setTitle(user.username)
+        .setImage(user.avatarURL({size: 2048})) 
+        
+    message.channel.send(embed);
+    
+};
+}
+    
 });
